@@ -1,0 +1,48 @@
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px 50px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 50px;
+    align-items: center;
+}
+
+nav li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: var(--color-grey);
+    transition: 0.3s;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+nav li a.active {
+    border-color: currentColor;
+}
+
+nav li:nth-child(1) a.active {
+    color: var(--color-home);
+    text-shadow: 0 0 10px var(--color-home);
+}
+nav li:nth-child(2) a.active {
+    color: var(--color-profil);
+    text-shadow: 0 0 10px var(--color-profil);
+}
+nav li:nth-child(3) a.active {
+    color: var(--color-projects);
+    text-shadow: 0 0 10px var(--color-projects);
+}
+nav li:nth-child(4) a.active {
+    color: var(--color-skills);
+    text-shadow: 0 0 10px var(--color-skills);
+}
