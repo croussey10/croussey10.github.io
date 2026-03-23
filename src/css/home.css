@@ -1,5 +1,7 @@
 .home-container {
-    height: 80vh;
+    height: 100vh;
+    padding-top: 6rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +47,6 @@ h3 {
     display: inline-block;
     margin-top: 40px;
     padding: 15px 40px;
-    font-family: var(--font-pixel);
     font-size: 2rem;
     color: var(--color-profil);
     text-decoration: none;

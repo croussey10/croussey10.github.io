@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import "../components/home.css"
+import "../css/home.css"
 import coinMario from "../assets/coin-mario.webp"
 
 export function Home() {

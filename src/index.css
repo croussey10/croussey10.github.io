@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 :root {
     /* Couleurs */
@@ -8,9 +9,11 @@
     --color-skills: #39ff14;
     --color-bg: #050510;
     --color-grey: #666666;
+    --color-aze: #1A1A24;
 
     /* Polices */
     --font-pixel: 'Press Start 2P', cursive;
+    --font-VT323: 'VT323', cursive;
 }
 
 * {

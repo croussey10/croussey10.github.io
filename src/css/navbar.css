@@ -1,18 +1,29 @@
 nav {
+    /* On fixe le conteneur parent pour qu'il reserve l'espace */
+    position: fixed;
+    top: 20px; /* On la décolle un peu du haut pour le style */
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    /* On s'assure qu'elle est devant TOUT le reste */
+    z-index: 1000;
+    pointer-events: none; /* Permet de cliquer à travers le vide du nav */
 }
 
 nav ul {
+    /* Le ul n'a plus besoin d'être fixed car son parent l'est déjà */
     display: flex;
     list-style: none;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px 50px;
+    background: rgba(18, 18, 18, 0.95); /* Fond sombre bien opaque */
+    backdrop-filter: blur(10px); /* Effet de flou derrière la nav */
+    padding: 10px 30px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    gap: 50px;
+    gap: 30px;
     align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: auto; /* Réactive les clics sur la barre elle-même */
 }
 
 nav li a {

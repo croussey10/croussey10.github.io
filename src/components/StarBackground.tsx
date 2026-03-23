@@ -1,6 +1,6 @@
 // src/components/StarBackground.tsx
 import { useMemo } from 'react';
-import './StarBackground.css';
+import '../css/starBackground.css';
 
 export default function StarBackground() {
     const stars = useMemo(() => {

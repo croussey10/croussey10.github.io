@@ -1,0 +1,157 @@
+/* --- PAGE CONTAINER --- */
+.project-detail-page {
+    max-width: 1000px;
+    margin: 7rem auto 60px;
+    padding: 0 40px;
+    position: relative;
+}
+
+/* --- LE GRAND CADRE VERT --- */
+.main-board.green-border {
+    background: rgba(10, 10, 20, 0.8);
+    border: 3px solid #00ff00;
+    border-radius: 20px;
+    padding: 60px 80px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.15);
+    position: relative;
+    min-height: 80vh;
+}
+
+/* --- NAVIGATION --- */
+.back-arrow {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    text-decoration: none;
+    color: #00ff00;
+    font-size: 2.5rem;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 5px #00ff00);
+    z-index: 10;
+}
+
+.back-arrow:hover {
+    transform: translateX(-5px);
+    filter: drop-shadow(0 0 10px #00ff00);
+}
+
+.project-title {
+    text-align: center;
+    font-family: var(--font-pixel);
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    letter-spacing: 4px;
+}
+
+/* --- SECTIONS DE CONTENU --- */
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-section {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espace entre le titre bleu et le texte */
+}
+
+/* Labels (REPOSITORY, OBJECTIF...) */
+.cyan-label {
+    display: block;
+    font-family: var(--font-pixel);
+    color: var(--color-projects);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+    margin: 0;
+}
+
+/* Le lien du Repo qui déborde (image_05fb14.png) */
+.repo-link {
+    color: #f0f0f0;
+    text-decoration: underline;
+    font-family: var(--font-VT323);
+    font-size: 22px;
+    line-height: 1.4;
+    padding-left: 10px;
+
+    /* Force la cassure du lien long */
+    word-break: break-all;
+    overflow-wrap: break-word;
+    display: block;
+    max-width: 100%;
+}
+
+.repo-link:hover {
+    color: var(--color-projects);
+}
+
+/* Textes descriptifs */
+.vt-text {
+    font-family: var(--font-VT323);
+    font-size: 24px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* Liste des contraintes */
+.vt-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.constraint-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.constraint-item::before {
+    content: "•";
+    margin-right: 15px;
+    color: var(--color-projects);
+}
+
+/* --- GALERIE --- */
+.galerie-container {
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--color-projects);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.yellow-label {
+    font-family: var(--font-pixel);
+    color: var(--color-home);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    display: block;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.4);
+}
+
+.galerie-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.galerie-item {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transition: 0.4s ease;
+}
+
+.galerie-item:hover {
+    transform: scale(1.01);
+}
