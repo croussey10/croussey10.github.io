@@ -1,5 +1,4 @@
 import "../css/profil.css"
-import placeholderImg from "../assets/placeholder.png"
 import ppImg from "../assets/charlie.png"
 
 export function Profil() {
