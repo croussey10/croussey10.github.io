@@ -102,7 +102,7 @@
     height: 35px;
     object-fit: contain;
     /* Petit effet lumineux vert sur les icônes comme sur ta maquette */
-    filter: drop-shadow(0 0 3px #00ff00);
+    filter: drop-shadow(0 0 2px #00ff00);
 }
 
 /* --- LE BOUTON VIEW PROJECT --- */

@@ -199,3 +199,7 @@
     to { filter: brightness(1.2); }
 }
 
+.glass-box:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+}

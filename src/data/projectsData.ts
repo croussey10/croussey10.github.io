@@ -29,11 +29,14 @@ export const projectsData: Project[] = [
             getImg("icons/java-icon.png"),
         ],
         repo: "https://github.com/croussey10/bataille-navale",
-        objectif: "L’objectif de ce projet était de refaire une application dynamique inspirée de spotify avec une base de données contenant les chanteurs, leurs musiques, leurs albums et encore pleins d’informations.",
+        objectif: "L’objectif de ce projet était de réaliser le jeu de la bataille navale en Java avec une interface graphique en combattant contre un bot.",
         contraintes: [
-            "",
+            "Utilisation de JavaFX",
+            "Lié le Backend Java avec l’interface JavaFX",
+            "Implémentation d'un système de coordonnées via des tableaux 2D pour la gestion des grilles et la détection des collisions",
+            "Conception d'un bot capable de jouer de manière autonome"
         ],
-        appris: "",
+        appris: "Ce projet a été réalisé en 1 semaine en groupe de 3. Ce projet m’a appris à maîtriser des concepts de classes, d'héritage et d'encapsulation, l'intégration de SoundFX et gestion des événements graphiques en temps réel",
         galerieImgs: [
             getImg("bataille-navale/bataille-navale-1.png"),
             getImg("bataille-navale/bataille-navale-2.png"),
@@ -87,7 +90,7 @@ export const projectsData: Project[] = [
             "Manipulation d’une BDD Postgres",
             "Enregistrer des images en BDD"
         ],
-        appris: "",
+        appris: "Ce projet a été réalisé à 3 en un temps limité d’un mois. Ce projet m’a appris à utiliser le framework Symfony, a faire des queries SQL postgres dans symfony, à comprendre et maîtriser le système MVC. Ce projet m'a également permis d'améliorer ma communication en équipe et la division des tâches.",
         galerieImgs: [
             getImg("y-remake-twitter/y-1.png"),
             getImg("y-remake-twitter/y-2.png"),
@@ -115,7 +118,7 @@ export const projectsData: Project[] = [
             "gestion des erreurs avec des pages personnalisé",
             "filtre par nom ou chanson d’un artiste"
         ],
-        appris: "",
+        appris: "Ce projet a été réalisé seul en un temps limité de 2 semaines. Il m’a appris à utiliser PHP, devoir gérer une base de données avec du PHP, l’utilisation des méthodes global.",
         galerieImgs: [
             getImg("lowify/lowify-1.png"),
             getImg("lowify/lowify-2.png"),
