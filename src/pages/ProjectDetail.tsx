@@ -11,14 +11,21 @@ export function ProjectDetail() {
     return (
         <div className="project-detail-page">
             <div className="main-board green-border">
-                <Link to="/projects" className="back-arrow">{"<"}</Link>
+                <Link to="/projects" className="back-arrow">
+                    {"<"}
+                </Link>
 
                 <h1 className="project-title">{project.title}</h1>
 
                 <div className="detail-content">
                     <section className="detail-section">
                         <p className="cyan-label">REPOSITORY :</p>
-                        <a href={project.repo} target="_blank" rel="noreferrer" className="repo-link">
+                        <a
+                            href={project.repo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="repo-link"
+                        >
                             {project.repo}
                         </a>
                     </section>
@@ -32,7 +39,9 @@ export function ProjectDetail() {
                         <p className="cyan-label">CONTRAINTES :</p>
                         <ul className="vt-text">
                             {project.contraintes.map((c, i) => (
-                                <li key={i} className="constraint-item">{c}</li>
+                                <li key={i} className="constraint-item">
+                                    {c}
+                                </li>
                             ))}
                         </ul>
                     </section>

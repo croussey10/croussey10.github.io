@@ -15,7 +15,9 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 4px;
     border: 2px solid white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
     margin-bottom: 100px;
 }
 
@@ -38,7 +40,6 @@
     letter-spacing: 2px;
 }
 
-/* GRILLE PRINCIPALE */
 .skills-tree {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -46,7 +47,6 @@
     width: 100%;
 }
 
-/* LE GRAND CADRE DE CHAQUE CATÉGORIE */
 .skill-group-box {
     background: rgba(10, 10, 20, 0.6);
     border: 3px solid;
@@ -56,11 +56,11 @@
     flex-direction: column;
     gap: 20px;
     position: relative;
-    /* On reprend ton style d'ombre de main-board */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
-/* PETITES CARTES DE SKILLS INDIVIDUELLES */
 .skill-card {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid;
@@ -73,23 +73,42 @@
     transition: all 0.3s ease;
 }
 
-/* THEMES COULEURS (Cyan, Magenta, Yellow) */
-/* FRONTEND */
-.cyan .skill-group-box { border-color: var(--color-projects); box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); }
-.cyan .skill-card { border-color: var(--color-projects); }
-.cyan .category-title { color: var(--color-projects); text-shadow: 0 0 10px var(--color-projects); }
+.cyan .skill-group-box {
+    border-color: var(--color-projects);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+.cyan .skill-card {
+    border-color: var(--color-projects);
+}
+.cyan .category-title {
+    color: var(--color-projects);
+    text-shadow: 0 0 10px var(--color-projects);
+}
 
-/* BACKEND */
-.magenta .skill-group-box { border-color: var(--color-profil); box-shadow: 0 0 15px rgba(255, 0, 255, 0.2); }
-.magenta .skill-card { border-color: var(--color-profil); }
-.magenta .category-title { color: var(--color-profil); text-shadow: 0 0 10px var(--color-profil); }
+.magenta .skill-group-box {
+    border-color: var(--color-profile);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+}
+.magenta .skill-card {
+    border-color: var(--color-profile);
+}
+.magenta .category-title {
+    color: var(--color-profile);
+    text-shadow: 0 0 10px var(--color-profile);
+}
 
-/* DATABASE */
-.yellow .skill-group-box { border-color: var(--color-home); box-shadow: 0 0 15px rgba(255, 255, 0, 0.2); }
-.yellow .skill-card { border-color: var(--color-home); }
-.yellow .category-title { color: var(--color-home); text-shadow: 0 0 10px var(--color-home); }
+.yellow .skill-group-box {
+    border-color: var(--color-home);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.2);
+}
+.yellow .skill-card {
+    border-color: var(--color-home);
+}
+.yellow .category-title {
+    color: var(--color-home);
+    text-shadow: 0 0 10px var(--color-home);
+}
 
-/* HOVER EFFECT (Inspiré de tes boutons) */
 .skill-card:hover {
     transform: translateY(-5px) scale(1.02);
     background: white;
@@ -103,4 +122,65 @@
     font-family: var(--font-pixel);
     font-size: 1.2rem;
     letter-spacing: 3px;
+}
+
+/* -- RESPONSIVE SKILLS -- */
+
+@media (max-width: 1024px) {
+    .skills-page {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 7rem;
+    }
+
+    .skills-tree {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .core-node {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-tree {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .board-titlee {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .core-inner {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+
+    .skill-group-box {
+        padding: 20px 15px;
+    }
+
+    .category-title {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .skill-card {
+        padding: 12px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-page {
+        padding: 6rem 10px 2rem;
+    }
+
+    .core-inner {
+        white-space: normal;
+        text-align: center;
+    }
 }

@@ -46,7 +46,9 @@
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1), inset 0 0 10px rgba(0, 255, 255, 0.05);
+    box-shadow:
+        0 0 15px rgba(0, 255, 255, 0.1),
+        inset 0 0 10px rgba(0, 255, 255, 0.05);
     perspective: 1000px;
 }
 
@@ -101,4 +103,59 @@
 
 .project-content:hover .div-language-icons img {
     filter: drop-shadow(0 0 8px #00ff00);
+}
+
+/* -- RESPONSIVE PROJECTS -- */
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        gap: 25px;
+    }
+
+    .main-board {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        margin-top: 5rem;
+        padding: 10px;
+    }
+
+    .board-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .img-container img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-title {
+        font-size: 1.1rem;
+    }
+
+    .div-language-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .project-content h3 {
+        font-size: 0.9rem;
+    }
 }

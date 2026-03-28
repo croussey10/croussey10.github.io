@@ -1,29 +1,26 @@
 nav {
-    /* On fixe le conteneur parent pour qu'il reserve l'espace */
     position: fixed;
-    top: 20px; /* On la décolle un peu du haut pour le style */
+    top: 20px;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* On s'assure qu'elle est devant TOUT le reste */
     z-index: 1000;
-    pointer-events: none; /* Permet de cliquer à travers le vide du nav */
+    pointer-events: none;
 }
 
 nav ul {
-    /* Le ul n'a plus besoin d'être fixed car son parent l'est déjà */
     display: flex;
     list-style: none;
-    background: rgba(18, 18, 18, 0.95); /* Fond sombre bien opaque */
-    backdrop-filter: blur(10px); /* Effet de flou derrière la nav */
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
     padding: 10px 30px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     gap: 30px;
     align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    pointer-events: auto; /* Réactive les clics sur la barre elle-même */
+    pointer-events: auto;
 }
 
 nav li a {
@@ -46,8 +43,8 @@ nav li:nth-child(1) a.active {
     text-shadow: 0 0 10px var(--color-home);
 }
 nav li:nth-child(2) a.active {
-    color: var(--color-profil);
-    text-shadow: 0 0 10px var(--color-profil);
+    color: var(--color-profile);
+    text-shadow: 0 0 10px var(--color-profile);
 }
 nav li:nth-child(3) a.active {
     color: var(--color-projects);
@@ -56,4 +53,37 @@ nav li:nth-child(3) a.active {
 nav li:nth-child(4) a.active {
     color: var(--color-skills);
     text-shadow: 0 0 10px var(--color-skills);
+}
+
+/* -- RESPONSIVE NAVBAR -- */
+
+@media (max-width: 768px) {
+    nav {
+        top: 10px;
+    }
+
+    nav ul {
+        padding: 8px 15px;
+        gap: 10px;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    nav li a {
+        padding: 6px 8px;
+        font-size: 0.6rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 380px) {
+    nav ul {
+        gap: 5px;
+        padding: 5px 10px;
+    }
+
+    nav li a {
+        padding: 4px 6px;
+        font-size: 0.55rem;
+    }
 }

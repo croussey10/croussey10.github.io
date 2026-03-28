@@ -1,7 +1,7 @@
-import {NavLink} from "react-router-dom";
-import "../css/navbar.css"
+import { NavLink } from "react-router-dom";
+import "../css/navbar.css";
 
-export function Navbar () {
+export function Navbar() {
     return (
         <nav>
             <ul>
@@ -9,7 +9,7 @@ export function Navbar () {
                     <NavLink to="/">ACCUEIL</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/profil">PROFIL</NavLink>
+                    <NavLink to="/profile">PROFIL</NavLink>
                 </li>
                 <li>
                     <NavLink to="/projects">PROJECTS</NavLink>
@@ -19,5 +19,5 @@ export function Navbar () {
                 </li>
             </ul>
         </nav>
-    )
+    );
 }

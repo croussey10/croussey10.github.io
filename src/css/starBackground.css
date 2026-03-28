@@ -14,14 +14,21 @@
     background-color: white;
     box-shadow: 0 0 3px white;
     animation:
-            twinkle infinite ease-in-out,
-            moveStar infinite linear;
+        twinkle infinite ease-in-out,
+        moveStar infinite linear;
     will-change: opacity, transform;
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.2); }
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes moveStar {
