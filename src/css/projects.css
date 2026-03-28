@@ -1,13 +1,11 @@
-/* --- LE CONTENEUR PRINCIPAL --- */
 .projects-page {
     max-width: 1100px;
     margin: 6rem auto 40px;
     padding: 20px;
 }
 
-/* Le grand cadre vert */
 .main-board {
-    background: rgba(10, 10, 20, 0.6); /* Fond sombre transparent */
+    background: rgba(10, 10, 20, 0.6);
     border-radius: 15px;
     padding: 40px;
 }
@@ -22,24 +20,19 @@
     letter-spacing: 2px;
 }
 
-/* --- LA GRILLE DE PROJETS --- */
 .projects-grid {
     display: grid;
-    /* Crée 3 colonnes automatiquement, et passe sur 1 ou 2 colonnes si l'écran est petit ! */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
 }
 
-/* --- LA CARTE PROJET --- */
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    /* Force la carte à prendre toute la hauteur disponible dans sa ligne de grille */
     height: 100%;
+    text-decoration: none;
 }
 
-/* La boîte bleue avec les infos */
 .project-content {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--color-projects);
@@ -48,84 +41,64 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.1);
+    flex-grow: 1;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1), inset 0 0 10px rgba(0, 255, 255, 0.05);
+    perspective: 1000px;
+}
 
-    /* C'EST ICI QUE CA SE PASSE */
-    flex-grow: 1; /* Force le cadre bleu à remplir tout l'espace vertical */
-    justify-content: space-between; /* Aligne le titre en haut, l'image au milieu, les icônes en bas */
+.project-content:hover {
+    background: rgba(0, 255, 255, 0.08);
+    border-color: #ffffff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
 }
 
 .project-content h3 {
     text-align: center;
     color: white;
     font-family: var(--font-pixel);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 3px white;
+    text-shadow: 0 0 5px white;
     letter-spacing: 1px;
 }
 
-/* --- L'IMAGE ET LES ICONES --- */
-.img-container img {
-    /* IMPORTE : L'image prend 100% de la hauteur et de la largeur de son conteneur parent */
+.img-container {
     width: 100%;
-    height: 100%;
-
-    /* LA PROPRIÉTÉ MAGIQUE */
-    object-fit: contain; /* L'image est redimensionnée pour tenir ENTIÈREMENT dans la zone, sans être coupée ni déformée */
-
-    /* Optionnel : si tes images n'ont pas de fond transparent, "cover" est mieux pour remplir la zone, mais "contain" est plus fidèle pour des schémas/logos */
-    /* object-fit: cover; */
-
-    max-width: 240px; /* Garde une largeur max raisonnable */
-    border-radius: 8px;
-    background-color: white; /* Fond blanc si l'image a de la transparence */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .img-container img {
     width: 100%;
-    max-width: 240px; /* Force l'image à ne pas être trop grande */
+    max-width: 240px;
+    height: 160px;
+    object-fit: contain;
     border-radius: 8px;
-    background-color: white; /* Important si ton SVG a un fond transparent */
-    border: 2px solid transparent; /* Prépare la place pour un effet au survol */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
 }
 
 .div-language-icons {
     display: flex;
     gap: 15px;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .div-language-icons img {
-    margin-top: 1rem;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
-    /* Petit effet lumineux vert sur les icônes comme sur ta maquette */
-    filter: drop-shadow(0 0 2px #00ff00);
+    filter: drop-shadow(0 0 3px #00ff00);
+    transition: transform 0.5s;
 }
 
-/* --- LE BOUTON VIEW PROJECT --- */
-.view-project-btn {
-    display: block;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    font-family: var(--font-pixel);
-    font-size: 0.8rem;
-    text-decoration: none;
-    padding: 15px;
-    border: 2px solid var(--color-projects);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-    transition: all 0.3s ease;
-    margin-top: auto;
-}
-
-/* Effet néon explosif quand on passe la souris dessus */
-.view-project-btn:hover {
-    background: var(--color-projects);
-    color: black; /* Le texte en noir ressort mieux sur un fond clair/lumineux */
-    box-shadow: 0 0 20px var(--color-projects);
-    transform: translateY(-3px); /* Fait "monter" légèrement le bouton */
+.project-content:hover .div-language-icons img {
+    filter: drop-shadow(0 0 8px #00ff00);
 }

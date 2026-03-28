@@ -1,5 +1,5 @@
 import './App.css'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import {Home} from "./pages/home.tsx";
 import {Profil} from "./pages/profil.tsx";
 import {Skills} from "./pages/skills.tsx";
@@ -10,21 +10,21 @@ import {ProjectDetail} from "./pages/projectDetail.tsx";
 
 function App() {
 
-  return (
-      <div className="App">
-          <StarBackground />
-          <BrowserRouter>
-              <Navbar/>
-              <Routes>
-                  <Route path="/" element={<Home/>}/>
-                  <Route path="/profil" element={<Profil/>}/>
-                  <Route path="/projects" element={<Projects/>}/>
-                  <Route path="/skills" element={<Skills/>}/>
-                  <Route path="/projects/:slug" element={<ProjectDetail />} />
-              </Routes>
-          </BrowserRouter>
-      </div>
-  )
+    return (
+        <div className="App">
+            <StarBackground/>
+            <HashRouter>
+                <Navbar/>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/profil" element={<Profil/>}/>
+                    <Route path="/projects" element={<Projects/>}/>
+                    <Route path="/skills" element={<Skills/>}/>
+                    <Route path="/projects/:slug" element={<ProjectDetail/>}/>
+                </Routes>
+            </HashRouter>
+        </div>
+    )
 }
 
 export default App
