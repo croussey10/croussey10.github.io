@@ -23,8 +23,8 @@ export function Home() {
     return (
         <div className="home-container">
             <div className="div-principal">
-                <h2 className="cyan-neon">WEB DEVELOPER</h2>
-                <h1 className="yellow-neon">PORTFOLIO</h1>
+                <h2 className="cyan-neon" role="heading" aria-level={1}>WEB DEVELOPER</h2>
+                <h1 className="yellow-neon" role="heading" aria-level={2}>PORTFOLIO</h1>
                 <h3 className="name yellow-neon">
                     CHARLIE R
                     <img src={coinMario} alt="O" className="coin-icon" />
