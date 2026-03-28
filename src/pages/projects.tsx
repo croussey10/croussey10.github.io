@@ -11,7 +11,6 @@ export function Projects() {
                 <div className="projects-grid">
                     {projectsData.map((project) => (
                         <div className="project-card" key={project.id}>
-                            {/* On transforme la div en Link pour rendre toute la zone cliquable */}
                             <Link to={`/projects/${project.slug}`} className="project-content blue-border">
                                 <h3>{project.title}</h3>
                                 <div className="img-container">
@@ -23,7 +22,6 @@ export function Projects() {
                                     ))}
                                 </div>
                             </Link>
-                            {/* Le bouton VIEW PROJECT a été supprimé ici */}
                         </div>
                     ))}
                 </div>

@@ -8,7 +8,7 @@ export function Profil() {
 
                 <div className="avatar-side">
                     <div className="avatar-frame">
-                        <img src={ppImg} alt="Charlie" />
+                        <img src={ppImg} alt="profil charlie" />
                     </div>
                     <div className="xp-section">
                         <p className="level-text">Bachelor 1 &gt; B2</p>

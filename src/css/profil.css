@@ -200,6 +200,6 @@
 }
 
 .glass-box:hover {
-    transition: 0.5s;
+    transition: 0.7s;
     transform: scale(1.05);
 }
