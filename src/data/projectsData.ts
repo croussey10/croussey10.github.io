@@ -4,6 +4,7 @@ export interface Project {
     slug: string;
     thumbnail: string;
     techIcons: string[];
+    lienDeploy: string;
     repo: string;
     objectif: string;
     contraintes: string[];
@@ -27,6 +28,7 @@ export const projectsData: Project[] = [
         slug: "bataille-navale",
         thumbnail: getImg("bataille-navale/bataille-navale-4.png"),
         techIcons: [getImg("icons/java-icon.svg")],
+        lienDeploy: "",
         repo: "https://github.com/croussey10/bataille-navale",
         objectif:
             "L’objectif de ce projet était de réaliser le jeu de la bataille navale en Java avec une interface graphique en combattant contre un bot.",
@@ -52,6 +54,7 @@ export const projectsData: Project[] = [
         slug: "pokedex",
         thumbnail: getImg("pokedex/pokedex-1.png"),
         techIcons: [getImg("icons/ts-icon.svg")],
+        lienDeploy: "https://croussey10.github.io/pokedex-cours-js/",
         repo: "https://github.com/croussey10/pokedex-cours-js.git",
         objectif:
             "L’objectif de ce projet était de faire un site web pokédex de pokémon en utilisant le langage TS et l’intégration de l’api PokeAPI.",
@@ -84,6 +87,7 @@ export const projectsData: Project[] = [
             getImg("icons/php-icon.svg"),
             getImg("icons/bdd-icon.svg"),
         ],
+        lienDeploy: "",
         repo: "https://github.com/croussey10/pokedex-cours-js.git",
         objectif:
             "L’objectif de ce projet était de refaire l’application Twitter ou X à notre sauce avec un système d’authentification, de gestion de base de données, de pouvoir créer des posts, liker, commenter et follow des personnes.\n",
@@ -109,6 +113,7 @@ export const projectsData: Project[] = [
         slug: "lowify",
         thumbnail: getImg("lowify/lowify-1.png"),
         techIcons: [getImg("icons/php-icon.svg"), getImg("icons/bdd-icon.svg")],
+        lienDeploy: "https://lowify.alwaysdata.net",
         repo: "https://github.com/croussey10/2025-php-project/tree/main/004-php-lowify",
         objectif:
             "L’objectif de ce projet était de refaire une application dynamique inspirée de spotify avec une base de données contenant les chanteurs, leurs musiques, leurs albums et encore pleins d’informations.",
@@ -138,6 +143,7 @@ export const projectsData: Project[] = [
             getImg("icons/html-icon.svg"),
             getImg("icons/css-icon.svg"),
         ],
+        lienDeploy: "",
         repo: "https://github.com/croussey10/tier-list-website.git",
         objectif:
             "L’objectif de ce projet était de faire un site web de tier list static avec une page d’accueil, la liste des tier list dans l’app, l’avant/après d’une tier list et la création d’une tier list\n",
@@ -163,6 +169,7 @@ export const projectsData: Project[] = [
         slug: "svg-editor",
         thumbnail: getImg("svg-editor.png"),
         techIcons: [getImg("icons/c-icon.svg")],
+        lienDeploy: "",
         repo: "https://github.com/croussey10/svg-project",
         objectif:
             "L’objectif de ce projet était de faire un éditeur SVG avec un menu dans le terminal pour ajouter des formes, choisir une couleur, une taille, son emplacement sur la viewport.\n",

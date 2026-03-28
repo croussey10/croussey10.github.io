@@ -1,9 +1,9 @@
-import { useParams, Link } from "react-router-dom";
-import { projectsData } from "../data/projectsData.ts";
+import {useParams, Link} from "react-router-dom";
+import {projectsData} from "../data/projectsData.ts";
 import "../css/projectDetail.css";
 
 export function ProjectDetail() {
-    const { slug } = useParams();
+    const {slug} = useParams();
     const project = projectsData.find((p) => p.slug === slug);
 
     if (!project) return <div className="error">Projet non trouvé</div>;
@@ -18,6 +18,24 @@ export function ProjectDetail() {
                 <h1 className="project-title">{project.title}</h1>
 
                 <div className="detail-content">
+                    <section className="detail-section">
+                        <p className="cyan-label">LIEN DU SITE :</p>
+                        {project.lienDeploy && project.lienDeploy !== "" ? (
+                            <a
+                                href={project.lienDeploy}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="deploy-link"
+                            >
+                                {project.lienDeploy}
+                            </a>
+                        ) : (
+                            <p className="vt-text" style={{color: "var(--color-grey)", opacity: 0.7}}>
+                                Projet non déployé / Pas de lien disponible
+                            </p>
+                        )}
+                    </section>
+
                     <section className="detail-section">
                         <p className="cyan-label">REPOSITORY :</p>
                         <a
