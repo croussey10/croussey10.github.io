@@ -13,7 +13,7 @@ export function Skills() {
             skills: ["NODE.JS", "PHP", "JAVA", "C", "PYTHON"],
         },
         {
-            title: "DATABASE (BDD)",
+            title: "DATABASE",
             theme: "yellow",
             skills: ["PostgreSQL"],
         },
