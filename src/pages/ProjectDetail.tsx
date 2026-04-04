@@ -1,9 +1,9 @@
-import { useParams, Link } from "react-router-dom";
-import { projectsData } from "../data/projectsData.ts";
+import {useParams, Link} from "react-router-dom";
+import {projectsData} from "../data/projectsData.ts";
 import "../css/projectDetail.css";
 
 export function ProjectDetail() {
-    const { slug } = useParams();
+    const {slug} = useParams();
     const project = projectsData.find((p) => p.slug === slug);
 
     if (!project) return <div className="error">Projet non trouvé</div>;
@@ -11,14 +11,39 @@ export function ProjectDetail() {
     return (
         <div className="project-detail-page">
             <div className="main-board green-border">
-                <Link to="/projects" className="back-arrow">{"<"}</Link>
+                <Link to="/projects" className="back-arrow">
+                    {"<"}
+                </Link>
 
                 <h1 className="project-title">{project.title}</h1>
 
                 <div className="detail-content">
                     <section className="detail-section">
+                        <p className="cyan-label">LIEN DU SITE :</p>
+                        {project.lienDeploy && project.lienDeploy !== "" ? (
+                            <a
+                                href={project.lienDeploy}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="deploy-link"
+                            >
+                                {project.lienDeploy}
+                            </a>
+                        ) : (
+                            <p className="vt-text" style={{color: "var(--color-grey)", opacity: 0.7}}>
+                                Projet non déployé / Pas de lien disponible
+                            </p>
+                        )}
+                    </section>
+
+                    <section className="detail-section">
                         <p className="cyan-label">REPOSITORY :</p>
-                        <a href={project.repo} target="_blank" rel="noreferrer" className="repo-link">
+                        <a
+                            href={project.repo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="repo-link"
+                        >
                             {project.repo}
                         </a>
                     </section>
@@ -32,7 +57,9 @@ export function ProjectDetail() {
                         <p className="cyan-label">CONTRAINTES :</p>
                         <ul className="vt-text">
                             {project.contraintes.map((c, i) => (
-                                <li key={i} className="constraint-item">{c}</li>
+                                <li key={i} className="constraint-item">
+                                    {c}
+                                </li>
                             ))}
                         </ul>
                     </section>
