@@ -18,7 +18,7 @@ export function Projects() {
                                 <h3>{project.title}</h3>
                                 <div className="img-container">
                                     <img
-                                        src={project.thumbnail}
+                                        src={project.imgCard}
                                         alt={project.title}
                                     />
                                 </div>

@@ -2,7 +2,7 @@ export interface Project {
     id: string;
     title: string;
     slug: string;
-    thumbnail: string;
+    imgCard: string;
     techIcons: string[];
     lienDeploy: string;
     repo: string;
@@ -23,10 +23,45 @@ const getImg = (path: string) => {
 
 export const projectsData: Project[] = [
     {
+        id: "region-bfc",
+        title: "Région BFC",
+        slug: "region-bfc",
+        imgCard: getImg("region-bfc/region-bfc-1.png"),
+        techIcons: [
+            getImg("icons/react-icon.svg"),
+            getImg("icons/bdd-icon.svg"),
+        ],
+        lienDeploy: "",
+        repo: "https://github.com/projet-region-bfc/projet-region.git",
+        objectif:
+            "L’objectif de ce projet était de créer une plateforme web pour l’entreprise “La Région Bourgogne-Franche-Comté” dans le but d’améliorer la communication entre les managers et agents avec un système de questionnaire pour chaque rôle.",
+        contraintes: [
+            "Livrer un produit fonctionnel et testé en seulement 3 semaines",
+            "Adapter les exigences techniques aux besoins et aux retours concrets d'un client",
+            "Gérer le système d’authentification et de rôle",
+        ],
+        appris:
+            "Ce projet a été réalisé en 3 semaines. Nous étions 5 et j’avais le rôle de chef d’équipe.\n" +
+            "Cela m'a appris à : \n" +
+            "- répartir les tâches de chacun en faisant en sorte que ce qu’ils fassent leur plaisent\n" +
+            "- d’aider un membre quand il était bloqué\n" +
+            "- que le travail de chacun soit livré dans les temps\n" +
+            "- d’organiser des réunions chaque fin de semaine savoir qui a fait quoi\n" +
+            "- Communiquer avec un client réel\n",
+        galerieImgs: [
+            getImg("region-bfc/region-bfc-1.png"),
+            getImg("region-bfc/region-bfc-2.png"),
+            getImg("region-bfc/region-bfc-3.png"),
+            getImg("region-bfc/region-bfc-4.png"),
+            getImg("region-bfc/region-bfc-5.png"),
+        ],
+    },
+
+    {
         id: "bataille-navale",
         title: "BATAILLE NAVALE",
         slug: "bataille-navale",
-        thumbnail: getImg("bataille-navale/bataille-navale-4.png"),
+        imgCard: getImg("bataille-navale/bataille-navale-4.png"),
         techIcons: [getImg("icons/java-icon.svg")],
         lienDeploy: "",
         repo: "https://github.com/croussey10/bataille-navale",
@@ -52,7 +87,7 @@ export const projectsData: Project[] = [
         id: "pokedex",
         title: "POKEDEX",
         slug: "pokedex",
-        thumbnail: getImg("pokedex/pokedex-1.png"),
+        imgCard: getImg("pokedex/pokedex-1.png"),
         techIcons: [getImg("icons/ts-icon.svg")],
         lienDeploy: "https://croussey10.github.io/pokedex-cours-js/",
         repo: "https://github.com/croussey10/pokedex-cours-js.git",
@@ -81,7 +116,7 @@ export const projectsData: Project[] = [
         id: "y-remake-twitter",
         title: "REMAKE TWITTER",
         slug: "y-remake-twitter",
-        thumbnail: getImg("y-remake-twitter/y-2.png"),
+        imgCard: getImg("y-remake-twitter/y-2.png"),
         techIcons: [
             getImg("icons/symfony-icon.svg"),
             getImg("icons/php-icon.svg"),
@@ -109,9 +144,9 @@ export const projectsData: Project[] = [
 
     {
         id: "lowify",
-        title: "LOWIFY",
+        title: "REMAKE SPOTIFY",
         slug: "lowify",
-        thumbnail: getImg("lowify/lowify-1.png"),
+        imgCard: getImg("lowify/lowify-1.png"),
         techIcons: [getImg("icons/php-icon.svg"), getImg("icons/bdd-icon.svg")],
         lienDeploy: "https://lowify.alwaysdata.net",
         repo: "https://github.com/croussey10/2025-php-project/tree/main/004-php-lowify",
@@ -138,7 +173,7 @@ export const projectsData: Project[] = [
         id: "tier-list",
         title: "TIER LIST",
         slug: "tier-list",
-        thumbnail: getImg("tier-list/tier-list-1.png"),
+        imgCard: getImg("tier-list/tier-list-1.png"),
         techIcons: [
             getImg("icons/html-icon.svg"),
             getImg("icons/css-icon.svg"),
@@ -167,7 +202,7 @@ export const projectsData: Project[] = [
         id: "svg-editor-1",
         title: "EDITEUR SVG",
         slug: "svg-editor",
-        thumbnail: getImg("svg-editor.png"),
+        imgCard: getImg("svg-editor.png"),
         techIcons: [getImg("icons/c-icon.svg")],
         lienDeploy: "",
         repo: "https://github.com/croussey10/svg-project",
