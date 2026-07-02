@@ -44,8 +44,8 @@ export const projectsData: Project[] = [
         appris:
             "- Structurer et prioriser mon travail rigoureusement seul avec la méthode agile MoSCoW\n" +
             "- Maîtriser une stack Front-End moderne avec Angular 18, notamment la réactivité avec les Signals\n" +
-            "- Sécuriser une base de données PostgreSQL avec Supabase en écrivant des règles de niveau ligne (Row Level Security) et des fonctions SQL\n" +
-            "- Développer des composants algorithmiques complexes, comme un calendrier dynamique de réservation en gérant la manipulation temporelle\n" +
+            "- Sécuriser une base de données PostgreSQL avec Supabase en écrivant des règles de sécurité (Row Level Security) et des fonctions SQL\n" +
+            "- Développer des composants algorithmiques complexes, comme un calendrier dynamique de réservation\n" +
             "- Concevoir une interface orientée \"Mobile-First\" tout en intégrant des principes d'éco-conception (sobriété des requêtes) et d'accessibilité\n",
         galerieImgs: [
             getImg("saas-auto-ecole/saas-auto-ecole-1.png"),
