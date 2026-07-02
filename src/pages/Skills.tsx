@@ -4,17 +4,17 @@ export function Skills() {
     const categories = [
         {
             title: "FRONTEND",
-            theme: "cyan",
-            skills: ["HTML / CSS / JS", "REACT"],
+            color: "cyan",
+            skills: ["ANGULAR 18", "REACT", "HTML / CSS"],
         },
         {
             title: "BACKEND",
-            theme: "magenta",
-            skills: ["NODE.JS", "PHP", "JAVA", "C", "PYTHON"],
+            color: "magenta",
+            skills: ["JAVA", "NODE.JS", "PHP", "C"],
         },
         {
             title: "DATABASE",
-            theme: "yellow",
+            color: "yellow",
             skills: ["PostgreSQL"],
         },
     ];
@@ -29,7 +29,7 @@ export function Skills() {
                 {categories.map((cat) => (
                     <div
                         key={cat.title}
-                        className={`skill-column ${cat.theme}`}
+                        className={`skill-column ${cat.color}`}
                     >
                         <div className="group-wrapper">
                             <div className="skill-group-box">

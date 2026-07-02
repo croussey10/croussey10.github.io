@@ -23,13 +23,48 @@ const getImg = (path: string) => {
 
 export const projectsData: Project[] = [
     {
+        id: "saas-auto-ecole",
+        title: "SaaS Auto-Ecole",
+        slug: "saas-auto-ecole",
+        imgCard: getImg("saas-auto-ecole/saas-auto-ecole-1.png"),
+        techIcons: [
+            getImg("icons/angular-icon.svg"),
+            getImg("icons/sql-icon.svg"),
+        ],
+        lienDeploy: "https://auto-ecole-project-cr10.vercel.app/auth/login/la-chouette",
+        repo: "https://github.com/croussey10/auto-ecole-project.git",
+        objectif:
+            "L’objectif de ce projet était de concevoir un SaaS multi-écoles (DriveConnect) pour digitaliser et centraliser la relation entre les auto-écoles, les moniteurs et les élèves. Le but était de redonner de l'autonomie aux élèves grâce à la réservation sur mobile, tout en simplifiant drastiquement la charge administrative et le suivi pédagogique pour les équipes.",
+        contraintes: [
+            "Livrer un MVP fonctionnel en totale autonomie sur une durée stricte de 6 semaines",
+            "Gérer une architecture multi-tenant pour garantir l'isolation totale et la sécurité des données entre les différentes auto-écoles",
+            "Implémenter des règles métiers strictes côté serveur (ex: impossibilité d'annuler une leçon à moins de 48h, décompte sécurisé des heures via Triggers SQL)",
+            "Assurer une synchronisation fluide et réactive entre la base de données et l'interface utilisateur",
+        ],
+        appris:
+            "- Structurer et prioriser mon travail rigoureusement seul avec la méthode agile MoSCoW\n" +
+            "- Maîtriser une stack Front-End moderne avec Angular 18, notamment la réactivité avec les Signals\n" +
+            "- Sécuriser une base de données PostgreSQL avec Supabase en écrivant des règles de niveau ligne (Row Level Security) et des fonctions SQL\n" +
+            "- Développer des composants algorithmiques complexes, comme un calendrier dynamique de réservation en gérant la manipulation temporelle\n" +
+            "- Concevoir une interface orientée \"Mobile-First\" tout en intégrant des principes d'éco-conception (sobriété des requêtes) et d'accessibilité\n",
+        galerieImgs: [
+            getImg("saas-auto-ecole/saas-auto-ecole-1.png"),
+            getImg("saas-auto-ecole/saas-auto-ecole-2.png"),
+            getImg("saas-auto-ecole/saas-auto-ecole-3.png"),
+            getImg("saas-auto-ecole/saas-auto-ecole-4.png"),
+            getImg("saas-auto-ecole/saas-auto-ecole-5.png"),
+            getImg("saas-auto-ecole/saas-auto-ecole-6.png"),
+        ],
+    },
+
+    {
         id: "region-bfc",
         title: "Région BFC",
         slug: "region-bfc",
         imgCard: getImg("region-bfc/region-bfc-1.png"),
         techIcons: [
             getImg("icons/react-icon.svg"),
-            getImg("icons/bdd-icon.svg"),
+            getImg("icons/sql-icon.svg"),
         ],
         lienDeploy: "",
         repo: "https://github.com/projet-region-bfc/projet-region.git",
@@ -73,7 +108,9 @@ export const projectsData: Project[] = [
             "Implémentation d'un système de coordonnées via des tableaux 2D pour la gestion des grilles et la détection des collisions",
             "Conception d'un bot capable de jouer de manière autonome",
         ],
-        appris: "Ce projet a été réalisé en 1 semaine en groupe de 3. Ce projet m’a appris à maîtriser des concepts de classes, d'héritage et d'encapsulation, l'intégration de SoundFX et gestion des événements graphiques en temps réel",
+        appris: "Ce projet a été réalisé en 1 semaine en groupe de 3. Ce projet m’a appris à :\n"+
+            "- maîtriser des concepts de classes, d'héritage et d'encapsulation,\n" +
+            "- l'intégration de SoundFX et gestion des événements graphiques en temps réel\n",
         galerieImgs: [
             getImg("bataille-navale/bataille-navale-1.png"),
             getImg("bataille-navale/bataille-navale-2.png"),
@@ -101,8 +138,8 @@ export const projectsData: Project[] = [
             "Intégrer l’api de PokeAPI",
         ],
         appris:
-            "Ce projet m’a permis d’améliorer mes compétences en TS avec l’utilisation d’api, du local storage et de fonctions asynchrones.\n" +
-            "Ce projet m’a également appris a travailler en pair-progrmaming, développer mes compétences en algorithmie et faire du code plus lisible.",
+            "- Améliorer mes compétences en TS avec l’utilisation d’api, du local storage et de fonctions asynchrones.\n" +
+            "- Travailler en pair-progrmaming, développer mes compétences en algorithmie et faire du code plus lisible.",
         galerieImgs: [
             getImg("pokedex/pokedex-1.png"),
             getImg("pokedex/pokedex-2.png"),
@@ -120,7 +157,7 @@ export const projectsData: Project[] = [
         techIcons: [
             getImg("icons/symfony-icon.svg"),
             getImg("icons/php-icon.svg"),
-            getImg("icons/bdd-icon.svg"),
+            getImg("icons/sql-icon.svg"),
         ],
         lienDeploy: "",
         repo: "https://github.com/croussey10/pokedex-cours-js.git",
@@ -132,7 +169,11 @@ export const projectsData: Project[] = [
             "Manipulation d’une BDD Postgres",
             "Enregistrer des images en BDD",
         ],
-        appris: "Ce projet a été réalisé à 3 en un temps limité d’un mois. Ce projet m’a appris à utiliser le framework Symfony, a faire des queries SQL postgres dans symfony, à comprendre et maîtriser le système MVC. Ce projet m'a également permis d'améliorer ma communication en équipe et la division des tâches.",
+        appris: "Ce projet a été réalisé à 3 en un temps limité d’un mois. Ce projet m’a appris à :\n" +
+            "- utiliser le framework Symfony\n " +
+            "- Faire des queries SQL postgres dans symfony\n " +
+            "- Comprendre et maîtriser le système MVC\n" +
+            "-  Améliorer ma communication en équipe et la division des tâches.",
         galerieImgs: [
             getImg("y-remake-twitter/y-1.png"),
             getImg("y-remake-twitter/y-2.png"),
@@ -147,7 +188,7 @@ export const projectsData: Project[] = [
         title: "REMAKE SPOTIFY",
         slug: "lowify",
         imgCard: getImg("lowify/lowify-1.png"),
-        techIcons: [getImg("icons/php-icon.svg"), getImg("icons/bdd-icon.svg")],
+        techIcons: [getImg("icons/php-icon.svg"), getImg("icons/sql-icon.svg")],
         lienDeploy: "https://lowify.alwaysdata.net",
         repo: "https://github.com/croussey10/2025-php-project/tree/main/004-php-lowify",
         objectif:
@@ -159,7 +200,10 @@ export const projectsData: Project[] = [
             "gestion des erreurs avec des pages personnalisé",
             "filtre par nom ou chanson d’un artiste",
         ],
-        appris: "Ce projet a été réalisé seul en un temps limité de 2 semaines. Il m’a appris à utiliser PHP, devoir gérer une base de données avec du PHP, l’utilisation des méthodes global.",
+        appris: "Ce projet a été réalisé seul en un temps limité de 2 semaines. Il m’a appris à :\n" +
+            "- Utiliser PHP\n" +
+            "- Devoir gérer une base de données\n " +
+            "- Utilisation des méthodes global",
         galerieImgs: [
             getImg("lowify/lowify-1.png"),
             getImg("lowify/lowify-2.png"),
@@ -187,7 +231,9 @@ export const projectsData: Project[] = [
             "Site Responsive",
             "Ajouter une autre langue",
         ],
-        appris: "Ce projet a été réalisé en groupe de 3 en un temps limité et il m’a permis d’améliorer ma communication, la gestion de mon temps et de prioriser les tâches. Coté technique ce projet m'a permis de faire un css responsive clean avec la gestion des grid box / flex box et également des mediaqueries",
+        appris: "Ce projet a été réalisé en groupe de 3 en un temps limité et il m’a appris à :\n" +
+            "- Améliorer ma communication, la gestion de mon temps et de prioriser les tâches\n " +
+            "- Faire un css responsive clean avec la gestion des grid box / flex box et également des mediaqueries",
         galerieImgs: [
             getImg("tier-list/tier-list-1.png"),
             getImg("tier-list/tier-list-2.png"),
